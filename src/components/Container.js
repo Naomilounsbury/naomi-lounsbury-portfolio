@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
-import About from "./components/pages/About";
-import Portfolio from "./components/project/Portfolio";
-import Contact from "./components/pages/Contact";
-import Resume from "./components/pages/Resume";
-import Footer from "./components/Footer";
+import Navigation from "./Header/Navigation";
+import About from "./project/About";
+import Portfolio from "./project/portfolio";
+import Contact from "./project/Contact";
+import Resume from "./pages/Resume";
 
-function App() {
+export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState("About");
 
   // TODO: its rendering the pages
@@ -29,12 +28,13 @@ function App() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+    <div>
+      <Navigation
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
+
       {renderPage()}
-      <Footer />
-    </>
+    </div>
   );
 }
-
-export default App;
