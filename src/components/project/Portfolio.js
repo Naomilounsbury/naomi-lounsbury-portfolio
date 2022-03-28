@@ -14,21 +14,46 @@ const ProjectList = () => {
       link: "https://github.com/Naomilounsbury/nerd-talks",
     },
     {
-      name: "Grocery booth",
+      name: "Budget Me Gold Arrrrh",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
+        "This is a budget tracking site made with mongoDB. It uses service workers and indexedDB to save data that was input while offline.",
+      link: "https://github.com/Naomilounsbury/budget-me-gold-arrrh",
     },
-    // {
-    //   name: "Building exterior",
-    //   description:
-    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-    // },
+    {
+      name: "Pizza Space Note Taker",
+      description:
+        "This is a note taker app made with express.js. It can save notes and delete notes.",
+      link: "https://github.com/Naomilounsbury/pizza-space-note-taker",
+    },
+    {
+      name: "Track Your Suits",
+      description:
+        "This is a cli tool I made that uses mySql to track employees. with this cli, you can view departments, roles and employees; add departments, roles and employees; update employee roles and managers as well as delete departments, roles and employees.",
+      link: "https://github.com/Naomilounsbury/track-your-suits",
+    },
+    {
+      name: "ReadME Generator",
+      description:
+        "This is a command line tool that generates a readME from the command line. ",
+      link: "https://github.com/Naomilounsbury/readme-generator",
+    },
+    {
+      name: "Event Inn",
+      description:
+        "This is a site made using html,css and javascript using api calls to get events and hotels of a searched city displayed on the page. Also the weather for that city will show up and we used the materialize CSS framework",
+      link: "https://github.com/Naomilounsbury/event-inn",
+    },
+    {
+      name: "Weather Dashboard",
+      description:
+        "This is a application that allows users to check the weather in a city of their choice. It uses Javascript, CSS and Html.",
+      link: "https://github.com/Naomilounsbury/weather-dashboard",
+    },
   ]);
 
   const toggleModal = (image, i) => {
     setCurrentPhoto({ ...image, index: i });
     setIsModalOpen(!isModalOpen);
-    console.log("PHOTOS.NAME", photos.name);
   };
 
   return (
@@ -36,20 +61,25 @@ const ProjectList = () => {
       {isModalOpen && (
         <Modal onClose={toggleModal} currentPhoto={currentPhoto} />
       )}
-      <div className="col-lg-4 flex-row">
-        {photos.map((image, i) => (
-          <>
-            <img
-              src={require(`../../assets/images/image${i}.png`)}
-              //src={nerd}
-              alt={image.name}
-              className="card-img-top"
-              onClick={() => toggleModal(image, i)}
-              key={image.name}
-            />
-            <h5>{image.name}</h5>
-          </>
-        ))}
+      <div className="row">
+        <div className="card-group ">
+          {photos.map((image, i) => (
+            <>
+              <div className="col-4 bg-success bg-opacity-25 p-3 border ">
+                <img
+                  src={require(`../../assets/images/image${i}.png`)}
+                  //src={nerd}
+                  alt={image.name}
+                  className="card-img-top img-thumbnail p-1"
+                  onClick={() => toggleModal(image, i)}
+                  key={image.name}
+                />
+                <h5>{image.name}</h5>
+                <p>{image.description}</p>
+              </div>
+            </>
+          ))}
+        </div>
       </div>
     </div>
   );
