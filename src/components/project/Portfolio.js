@@ -65,7 +65,7 @@ const ProjectList = () => {
         <div className="card-group ">
           {photos.map((image, i) => (
             <>
-              <div className="col-4 bg-success bg-opacity-25 p-3 border ">
+              <div className="col-md-4 col-sm-12 bg-success bg-opacity-25 p-3 border ">
                 <img
                   src={require(`../../assets/images/image${i}.png`)}
                   //src={nerd}

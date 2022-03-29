@@ -8,7 +8,7 @@ import kindergarten from "../../assets/kindergarten.jpg";
 import pangolin from "../../assets/pangolin.jpg";
 export default function Resume() {
   return (
-    <div>
+    <div className="bg-success bg-opacity-25">
       <h1 className="text-center">Skills</h1>
       <p>I have lots of skills</p>
       <div className="font-monospace">

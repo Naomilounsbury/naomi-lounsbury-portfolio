@@ -41,12 +41,15 @@ function ContactForm() {
   };
 
   return (
-    <section>
+    <section className="col-12 bg-success bg-opacity-25 ">
       <h1 data-testid="h1tag">Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name" className="form-label">
+            Name:
+          </label>
           <input
+            className="form-control"
             type="text"
             name="name"
             defaultValue={name}
@@ -54,8 +57,11 @@ function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="email">Email address:</label>
+          <label className="form-label" htmlFor="email">
+            Email:
+          </label>
           <input
+            className="form-control"
             type="email"
             name="email"
             defaultValue={email}
@@ -63,8 +69,11 @@ function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
+          <label className="form-label" htmlFor="message">
+            Message:
+          </label>
           <textarea
+            className="form-control"
             name="message"
             rows="5"
             defaultValue={message}

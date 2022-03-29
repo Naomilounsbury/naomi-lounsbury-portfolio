@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="bg-success bg-opacity-50">
       <div>
         <h5>
           Email:
