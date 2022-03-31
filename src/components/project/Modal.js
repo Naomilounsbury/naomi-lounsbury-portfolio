@@ -1,7 +1,7 @@
 import React from "react";
-
+import { FaGithub } from "react-icons/fa";
 const Modal = ({ onClose, currentPhoto }) => {
-  const { name, description, link, index } = currentPhoto;
+  const { name, description, githubLink, liveLink, index } = currentPhoto;
 
   return (
     <div className="modalBackdrop">
@@ -12,7 +12,10 @@ const Modal = ({ onClose, currentPhoto }) => {
           alt="current category"
         />
         <p>{description}</p>
-        <a href={link}> GitHub</a>
+        <a href={githubLink}>
+          <FaGithub />
+        </a>
+        <a href={liveLink}>Click Here for the Live Application</a>
         <button type="button" onClick={onClose}>
           Close
         </button>
