@@ -9,6 +9,13 @@ const ProjectList = () => {
 
   const [photos] = useState([
     {
+      name: "0nlypets",
+      description:
+        "This is a picture posting site made with a React front end, mongoDB backend and grapgql connection. You can create, read, update and delete posts. Currently you can create comments but not delete or update those comments unless you delete the whole post. In the future, I hope to add likes and delete functionality to comments.",
+      githubLink: "https://github.com/Naomilounsbury/0nlypets",
+      liveLink: "https://alex-d-marten-0nlypets.herokuapp.com/",
+    },
+    {
       name: "Nerd Talks",
       description:
         "This is a blogging site made with sequelize, express and handlebars.js. It made done with a model, view and controller. You can create, read, update and delete posts. Currently you can create comments but not delete or update those comments unless you delete the whole post, so that's an area I can improve.",
@@ -86,12 +93,12 @@ const ProjectList = () => {
 
                 <p>{image.description}</p>
                 <h3 className="text-center">
-                  <a href="{image.githubLink}">
+                  <a href={image.githubLink}>
                     <FaGithub />
                   </a>
                 </h3>
                 <h3 className="text-center">
-                  <a href="{image.liveLink}">
+                  <a href={image.liveLink}>
                     <FaDumpsterFire />
                     Live Link
                   </a>

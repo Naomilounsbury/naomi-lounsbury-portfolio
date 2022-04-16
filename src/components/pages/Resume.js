@@ -13,6 +13,12 @@ export default function Resume() {
       <p>I have lots of skills</p>
       <div className="font-monospace">
         <span className="fs-6 p-3 m-1 fw-bold bg-success bg-opacity-10">
+          React.js
+        </span>
+        <span className="fs-5 p-2 m-1 fst-italic bg-success bg-opacity-10">
+          graphql
+        </span>
+        <span className="fs-6 p-3 m-1 fw-bold bg-success bg-opacity-10">
           HTML
         </span>
         <span className="fs-5 p-2 m-1 fst-italic bg-success bg-opacity-10">
